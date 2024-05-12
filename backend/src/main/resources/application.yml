@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3456/club?erverTimezone=CST
+    username: root
+    password: 123456
+#你的电脑mysql端口是3456
+#然后密码和账号是这个嘛
+
+  data:
+    resources:
+      static-locations: classpath:static/
+  servlet:
+    multipart:
+      max-file-size: 5MB
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰命名和下划线命名的自动转换
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+server:
+  port: 8080
+
+
+upload:
+  location:
+    os: E:/BistuMaker/web/club_demo-master/backend/target/classes/static/images
+    os1: E:/BistuMaker/web/club_demo-master/backend/target/classes/static
